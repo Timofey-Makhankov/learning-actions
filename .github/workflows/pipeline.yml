@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: run script file
+        shell: bash
         #working-directory: ${{ github.workspace }}/public
         run: |
             chmod +x ./run.sh
             ./public/run.sh
-        shell: bash
