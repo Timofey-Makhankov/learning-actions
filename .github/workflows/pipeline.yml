@@ -15,3 +15,29 @@ jobs:
             pwd
             chmod +x run.sh
             ./run.sh
+  copy-to-server-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get files 
+      - uses: actions/checkout@v4
+      
+      - name: upload script
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          protocol: ftps
+          server-dir: ./upload
+          # port: 8913
+      - name: run script
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd upload
+            chmod +x run.sh
+            ./run.sh
