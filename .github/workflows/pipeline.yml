@@ -18,18 +18,18 @@ jobs:
   copy-to-server-script:
     runs-on: ubuntu-latest
     steps:
-      - name: get files 
-        uses: actions/checkout@v4
+      #- name: get files 
+        #uses: actions/checkout@v4
       
-      - name: upload script
+      #- name: upload script
         #uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+        #uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        #with:
+          #server: ${{ secrets.HOST }}
+          #username: ${{ secrets.USERNAME }}
+          #password: ${{ secrets.PASSWORD }}
           # protocol: sftp
-          remote_path: ./upload/
+          #remote_path: ./upload/
           # port: 8913
       - name: run script
         uses: appleboy/ssh-action@v1.0.0
