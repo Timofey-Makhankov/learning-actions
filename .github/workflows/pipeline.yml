@@ -27,7 +27,7 @@ jobs:
           server: ftp.${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          protocol: ftps
+          protocol: sftp
           server-dir: ./upload/
           # port: 8913
       - name: run script
