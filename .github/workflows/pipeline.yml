@@ -1,0 +1,14 @@
+name: learning-actions
+run-name: actions
+
+on: [push]
+jobs:
+  using-bash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: run script file
+        run: |
+            chmod +x ./public/run.sh
+            ./public/run.sh
+        shell: bash
