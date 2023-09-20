@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           protocol: ftps
-          server-dir: ./upload
+          server-dir: ./upload/
           # port: 8913
       - name: run script
         uses: appleboy/ssh-action@v1.0.0
