@@ -11,5 +11,7 @@ jobs:
         shell: bash
         #working-directory: ${{ github.workspace }}/public
         run: |
+            ls -al
+            pwd
             chmod +x ./run.sh
             ./public/run.sh
