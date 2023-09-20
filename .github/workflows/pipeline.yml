@@ -13,5 +13,5 @@ jobs:
         run: |
             ls -al
             pwd
-            chmod +x ./run.sh
-            ./public/run.sh
+            chmod +x run.sh
+            ./run.sh
