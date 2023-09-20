@@ -38,7 +38,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: |
-            cd upload
-            chmod +x run.sh
-            ./run.sh
+          script: ./run.sh
