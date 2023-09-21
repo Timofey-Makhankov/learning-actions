@@ -39,6 +39,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-          ls
-          ./run.sh
+            ls
+            ./run.sh
             
